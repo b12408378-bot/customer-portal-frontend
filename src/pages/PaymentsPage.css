@@ -1,0 +1,78 @@
+/* WRAPPER */
+.payment-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full page height */
+  background: linear-gradient(135deg, #5a4d7a, #7c6aa0); /* gradient covers entire page */
+}
+
+/* CONTAINER */
+.payment-container {
+  flex: 1; /* takes remaining space above footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* CARD AND FORM */
+.payment-card {
+  background-color: #fff;
+  padding: 35px 45px;
+  border-radius: 12px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+}
+
+.payment-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #685a9e;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-control:focus {
+  border-color: #5a46ac;
+  box-shadow: 0 0 8px rgba(139, 119, 219, 0.5);
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.half-width {
+  flex: 1;
+}
+
+/* BUTTON */
+.btn-pay {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #60548d, #60548d);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.btn-pay:hover {
+  background: linear-gradient(90deg, #8365a9, #685a9e);
+}

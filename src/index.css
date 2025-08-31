@@ -1,0 +1,219 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+/* src/index.css */
+
+/* --- Theme variables (tweak colors here) --- */
+:root{
+  --primary: #0d6efd;        /* bootstrap default blue */
+  --accent: #ff3b30;         /* bright telecom accent */
+  --card-bg: rgba(255,255,255,0.92);
+  --muted: rgba(0,0,0,0.6);
+  --radius: 14px;
+}
+
+/* Page background */
+body, #root {
+  min-height: 100vh;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  /* background: linear-gradient(180deg, #2F004F 0%, #1A002F 100%); */
+  /* background: linear-gradient(180deg, #3E006E 0%, #12002F 100%);
+  background-blend-mode: overlay;  */
+  color: #111827;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  background: 
+    linear-gradient(180deg, #534abe 0%, #906bb4 50%,  #E9A5F1 100%),  
+    /* linear-gradient(180deg, #1A2A80 0%,
+  #3B38A0 30%,
+  #7A85C1 65%,
+  #B2B0E8 100%), */
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><circle cx='1' cy='1' r='1' fill='white' fill-opacity='0.02'/></svg>");
+  background-repeat: repeat;
+  background-size: auto, 20px 20px;
+}
+
+/* Centering wrapper used by pages */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* The card that contains forms */
+.auth-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.25);
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  overflow: hidden;
+  border-left: 6px solid rgba(0,0,0,0.04);
+}
+
+/* subtle accent stripe (top-right) */
+.auth-card::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  top: -80px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.18), transparent 35%);
+  transform: rotate(25deg);
+  pointer-events: none;
+}
+
+/* logo */
+.brand-logo {
+  display: block;
+  margin: 0 auto 8px auto;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+/* SVG wordmark */
+.brand-wordmark {
+  display: block;
+  margin: 0 auto 8px;
+  /* This color drives the SVG fill/stroke because we used 'currentColor' */
+  color: #ffffff; /* white on your purple gradient */
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* forces left alignment */
+}
+
+
+/* headings */
+.auth-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
+.auth-sub {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  font-size: .9rem;
+}
+
+/* rounded inputs and subtle inner shadow */
+.form-control {
+  border-radius: 10px;
+  box-shadow: inset 0 1px 2px rgba(2,6,23,0.03);
+}
+
+/* make input group buttons subtle */
+.input-group .btn {
+  border-radius: 8px;
+}
+
+/* accent button (use for login) */
+.btn-accent {
+  background: linear-gradient(90deg, var(--accent), #e02a1f);
+  border: none;
+  color: white;
+  box-shadow: 0 6px 18px rgba(255,59,48,0.18);
+  border-radius: 28px;
+  padding: 0.6rem 1rem;
+}
+
+/* secondary plain button */
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 28px;
+  padding: 0.55rem 0.9rem;
+}
+
+/* small muted text links */
+.small-link {
+  color: var(--muted);
+  font-size: .85rem;
+}
+.form-label.small-link {
+  font-weight: 700;
+}
+
+/* form footer */
+.form-footer {
+  margin-top: .6rem;
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+/* Add the new text color styles here */
+.auth-header h2 {
+  color: #FFFFFF; /* Welcome Back text */
+}
+
+.auth-field label {
+  color: #F3F3F3; /* Email, Password labels */
+}
+
+.auth-field small {
+  color: rgba(255, 255, 255, 0.8); /* Hint text */
+}
+
+.auth-btn {
+  background: #6A4ACB; /* A bold purple */
+  color: #FFFFFF;      /* White text */
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-btn:hover {
+  background: #5633A5; /* Slightly darker on hover */
+}
+
+
+
+/* responsive tweaks */
+@media (max-width: 480px){
+  .auth-card { padding: 1.25rem; max-width: 95%; }
+  .brand-logo { width: 48px; height: 48px; }
+}

@@ -1,0 +1,30 @@
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-card {
+  padding: 20px;
+  width: 400px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom {
+  background-color: #6A4ACB; /* Bold purple */
+  color: #FFFFFF; /* White text */
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #5a3ca2; /* Slightly darker purple on hover */
+}

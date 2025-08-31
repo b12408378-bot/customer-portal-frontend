@@ -1,0 +1,74 @@
+/* src/pages/PlansPage.css */
+
+.plans-container {
+  padding: 40px 20px;
+  background: linear-gradient(to bottom right, #c1b7e9, #cec2f1); /* subtle gradient */
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+.plans-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.plan-card {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
+  text-align: center;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.plan-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.plan-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.plan-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #685a9e; /* same as button color for consistency */
+  margin-bottom: 20px;
+}
+
+.btn-recharge {
+  background-color: #685a9e;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 0;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-recharge:hover {
+  background-color: #574783; /* slightly darker on hover */
+  transform: scale(1.05);
+}

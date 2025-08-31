@@ -1,0 +1,162 @@
+/* Only Dashboard page background with gradient */
+.dashboard-page {
+  background: linear-gradient(135deg, #c9a2e5, #f0c6f9);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes footer to bottom */
+  padding: 20px 0;
+}
+
+
+
+/* Dashboard main container */
+.dashboard-container {
+  background: #fdf2e9;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0,0,0,0.15); /* ultra-strong shadow */
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+
+/* Action buttons section */
+.dashboard-actions {
+  display: flex;
+  justify-content: center;
+  gap: 60px; /* add space between buttons */
+  flex-wrap: wrap; /* ensures buttons wrap nicely on smaller screens */
+}
+
+
+
+.dashboard-actions .dashboard-btn {
+  background: #685a9e; /* match Login button color */
+  color: #fff; /* white text */
+  border: none;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  min-width: 120px;
+  text-align: center;
+}
+
+.dashboard-actions .dashboard-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* Titles and subtitles */
+.dashboard-title {
+  font-size: clamp(1.8rem, 5vw, 2.5rem); /* responsive font size */
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.dashboard-subtitle {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+/* Line clamp for title */
+.text-atom {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-items: center;
+}
+
+/* Section headings */
+.section-title {
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Showcase cards */
+.dashboard-showcase .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.showcase-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 280px; /* responsive width */
+  max-width: 350px;
+}
+
+.showcase-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Icons & video in showcase */
+.showcase-icon {
+  max-height: 120px;
+  margin-bottom: 15px;
+}
+
+.showcase-video {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* Showcase text */
+.showcase-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.showcase-text {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 0;
+  line-height: 1.4;
+}
+
+/* Slider section styling */
+.dashboard-slider {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+}
+
+
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+  .dashboard-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dashboard-title {
+    text-align: center;
+  }
+
+  .showcase-card {
+    max-width: 100%;
+  }
+}
