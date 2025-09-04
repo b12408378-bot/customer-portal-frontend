@@ -1,74 +1,104 @@
-/* src/pages/PlansPage.css */
 
+/* Container background */
 .plans-container {
-  padding: 40px 20px;
-  background: linear-gradient(to bottom right, #c1b7e9, #cec2f1); /* subtle gradient */
-  font-family: 'Poppins', sans-serif;
+  background: #000; /* Black background */
+  color: #fff; /* White text */
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
 }
 
+/* Inline Navbar buttons */
+.dashboard-actions .dashboard-btn {
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 8px 16px;
+  transition: 0.3s;
+}
+
+.dashboard-actions .btn-danger {
+  background-color: #ff0000; /* Red */
+  color: #fff;
+  border: none;
+}
+
+.dashboard-actions .btn-dark {
+  background-color: #fff; /* Dark black */
+  color: #000;
+  border: none;
+}
+
+.dashboard-actions .btn-light {
+  background-color: #fff;
+  color: #000;
+  border: none;
+}
+
+.dashboard-actions .dashboard-btn:hover {
+  opacity: 0.8;
+}
+
+/* Plans heading */
 .plans-heading {
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 40px;
+  color: #ff0000; /* Red heading */
+  margin-bottom: 20px;
 }
 
+/* Plans grid */
 .plans-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
 }
 
+/* Plan card */
 .plan-card {
-  background: #ffffff;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  background-color: #111; /* Dark black card */
+  border: 2px solid #ff0000; /* Red border */
+  border-radius: 10px;
+  padding: 15px;
   transition: transform 0.3s, box-shadow 0.3s;
-  padding: 20px;
-  text-align: center;
 }
 
 .plan-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px #ff0000;
 }
 
 .plan-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #222;
+  color: #ff0000; /* Red title */
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
 .plan-description {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 15px;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
 }
 
 .plan-price {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #685a9e; /* same as button color for consistency */
-  margin-bottom: 20px;
+  color: #ff0000;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
+/* Recharge button */
 .btn-recharge {
-  background-color: #685a9e;
-  border: none;
+  background-color: #ff0000;
   color: #fff;
-  font-weight: 600;
-  padding: 12px 0;
-  width: 100%;
-  border-radius: 8px;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
+  transition: 0.3s;
 }
 
 .btn-recharge:hover {
-  background-color: #574783; /* slightly darker on hover */
-  transform: scale(1.05);
+  background-color: #fff;
+  color: #ff0000;
 }

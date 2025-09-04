@@ -1,30 +1,159 @@
+
+/* Center the auth card */
 .auth-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: linear-gradient(135deg, #000000, #ff0000, #000000);
+  background-image: url('../assets/images/LoginBG.jpg'); /* Add your image path */
+  background-size: cover;
+  background-position: center;
 }
 
+/* Brand logo & name */
+.brand-container {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, red, black, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card styling */
 .auth-card {
-  padding: 20px;
-  width: 400px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 380px; /* Reduced width */
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  border: 5px solid #fc0404;
+  max-height: 85vh; /* Reduced height */
+  overflow: auto;
 }
 
+/* Button styling */
 .btn-custom {
-  background-color: #6A4ACB; /* Bold purple */
-  color: #FFFFFF; /* White text */
+  background-color: #E53935;
+  color: #FFFFFF;
   border: none;
   border-radius: 10px;
   padding: 12px 20px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn-custom:hover {
-  background-color: #5a3ca2; /* Slightly darker purple on hover */
+  background-color: #D32F2F;
+  transform: translateY(-2px);
+}
+
+/* Headings */
+.auth-card h2,
+.auth-title {
+  color: #1A1A1A;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.auth-sub {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Input fields */
+.auth-card input {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 10px 0;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Labels black */
+.label-black {
+  color: #000 !important;
+}
+
+/* Standard checkbox */
+.checkbox-default {
+  width: auto;
+  height: auto;
+  transform: none;
+  margin: 0;
+  padding: 0;
+  appearance: checkbox; /* ensures default look across browsers */
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  -o-appearance: checkbox;
+}
+
+/* styles.css */
+.remember-me-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.remember-me-container input {
+  margin: 0;
+}
+
+.remember-me-container label {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+
+/* Toggle password icon */
+.password-container {
+  position: relative;
+}
+
+
+.password-input-wrapper {
+  position: relative;
+  display: block; /* Change from flex to block */
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* Add space for the eye icon */
+  box-sizing: border-box;
+}
+
+.password-input-wrapper .toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%); /* Perfect vertical centering */
+  cursor: pointer;
+}
+
+/* Links */
+.auth-card a {
+  color: #E53935;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-card a:hover {
+  text-decoration: underline;
 }

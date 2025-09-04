@@ -1,78 +1,107 @@
-/* WRAPPER */
+
+/* PaymentsPage.css */
+
+/* Page Wrapper */
 .payment-page-wrapper {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* full page height */
-  background: linear-gradient(135deg, #5a4d7a, #7c6aa0); /* gradient covers entire page */
+  justify-content: space-between;
+  background: linear-gradient(135deg, #b30000, #000000);
+  color: #fff; /* white text */
+  padding: 20px 0;
 }
 
-/* CONTAINER */
-.payment-container {
-  flex: 1; /* takes remaining space above footer */
+/* Brand Logo Header */
+.payment-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
-/* CARD AND FORM */
-.payment-card {
-  background-color: #fff;
-  padding: 35px 45px;
+/* Inline Dashboard Navbar Buttons - White with Black Text */
+.dashboard-actions .dashboard-btn {
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text */
+  border: 2px solid #000000; /* Black border */
+  padding: 8px 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none; /* remove underline */
+}
+
+.dashboard-actions .dashboard-btn:hover {
+  background-color: #000000; /* Black on hover */
+  color: #ffffff; /* White text on hover */
+}
+
+
+/* Payment Container */
+.payment-container {
+  max-width: 450px;
+  margin: 20px auto;
+  background-color: #fff; /* white card background */
+  color: #000; /* black text inside card */
   border-radius: 12px;
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
-  width: 400px;
-  max-width: 90%;
+  padding: 30px 25px;
+  box-shadow: 0 4px 15px rgba(179, 0, 0, 0.3); /* subtle red shadow */
 }
 
+/* Payment Card Title */
 .payment-title {
   text-align: center;
-  margin-bottom: 30px;
-  font-weight: 700;
-  color: #685a9e;
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #b30000; /* red title */
+  font-weight: bold;
 }
 
+/* Form Group */
 .form-group {
   margin-bottom: 20px;
 }
 
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
 .form-control {
   width: 100%;
-  padding: 12px 15px;
-  border-radius: 8px;
+  padding: 10px 12px;
+  border-radius: 6px;
   border: 1px solid #ccc;
+  font-size: 16px;
   outline: none;
-  transition: 0.3s;
+  transition: border-color 0.3s ease;
 }
 
 .form-control:focus {
-  border-color: #5a46ac;
-  box-shadow: 0 0 8px rgba(139, 119, 219, 0.5);
+  border-color: #b30000;
 }
 
-.form-row {
-  display: flex;
-  gap: 15px;
-}
-
-.half-width {
-  flex: 1;
-}
-
-/* BUTTON */
+/* Pay Now Button */
 .btn-pay {
   width: 100%;
-  padding: 14px;
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #b30000; /* red button */
+  color: #fff;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(90deg, #60548d, #60548d);
-  color: #fff;
-  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
-  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .btn-pay:hover {
-  background: linear-gradient(90deg, #8365a9, #685a9e);
+  background-color: #800000; /* darker red on hover */
+}
+
+/* Footer */
+.payment-page-wrapper footer {
+  margin-top: 40px;
 }

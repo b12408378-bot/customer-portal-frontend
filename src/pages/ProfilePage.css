@@ -1,20 +1,22 @@
+
 /* src/pages/ProfilePage.css */
 
 .profile-page {
-  background: linear-gradient(135deg, #f9f9f9 0%, #e6e6f2 100%);
+  background: linear-gradient(135deg, #000000 0%, #ff0000 50%, #ffffff 100%);
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  color: #fff; /* Changed for better contrast on dark theme */
 }
 
 .profile-container {
   max-width: 650px;
   margin: 50px auto;
-  background: #fff;
+  background: #5e5e5e; /* Dark container to match theme */
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3); /* Red glow effect */
   text-align: center;
+  color: #fff;
 }
 
 .profile-header {
@@ -27,24 +29,27 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 3px solid #685a9e;
+  border: 3px solid #ff0000; /* Red accent border */
   margin-bottom: 15px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .profile-image:hover {
   transform: scale(1.05);
+  border-color: #ffffff; /* White border glow on hover */
 }
 
 .profile-title {
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 10px;
+  color: #ff0000; /* Red title */
 }
 
 .profile-welcome {
   font-size: 18px;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .profile-details {
@@ -58,10 +63,11 @@
 .profile-details li {
   margin: 10px 0;
   font-size: 16px;
+  color: #f5f5f5; /* Light gray for readability */
 }
 
 .edit-profile-btn {
-  background: #685a9e;
+  background: #ff0000; /* Red button */
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -72,6 +78,6 @@
 }
 
 .edit-profile-btn:hover {
-  background: #56478d;
+  background: #b30000; /* Darker red on hover */
   transform: translateY(-2px);
 }
